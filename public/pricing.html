@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Website Offer</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- pricing cards-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="styleshee">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+     .navbar {
+      background: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #1c4a8d;
+    }
+
+    .btn-primary {
+      background: #1c4a8d;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #163870;
+    }
+
+    .pricing-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f4f9ff;
+    }
+
+    .pricing-section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #0a2540;
+    }
+
+    .pricing-section p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 50px;
+    }
+
+    .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      padding: 25px;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-header {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .basic {
+      background: #f72585;
+    }
+
+    .classic {
+      background: #7209b7;
+    }
+
+    .premium {
+      background: #0077ff;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .features {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    .features li {
+      list-style: none;
+      margin: 10px 0;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: '✔';
+      color: #0077ff;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0a2540;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0077ff;
+    }
+
+    #pricing-2 {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f9fcff;
+    }
+
+    #pricing-2 h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #0a2540;
+    }
+
+    #pricing-2 .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    #pricing-2 .plan-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      padding: 25px;
+      transition: 0.3s ease;
+    }
+
+    #pricing-2 .plan-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    #pricing-2 .card-header {
+      font-size: 1.4rem;
+      font-weight: 700;
+      padding: 15px;
+      border-radius: 8px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .plan-card.silver .card-header {
+      background: #f9a825;
+      /* Silver plan Yellow */
+    }
+
+    .plan-card.gold .card-header {
+      background: #1c344d;
+      /* Dark Blue */
+    }
+
+    .plan-card.platinum .card-header {
+      background: #1c344d;
+      /* Same Blue */
+    }
+
+    #pricing-2 .price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 20px;
+    }
+
+    #pricing-2 .features {
+      text-align: left;
+      margin-bottom: 25px;
+      padding-left: 0;
+    }
+
+    #pricing-2 .features li {
+      list-style: none;
+      margin: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      font-size: 15px;
+      color: #333;
+    }
+
+    #pricing-2 .features li::before {
+      content: "\2714";
+      /* Tick mark */
+      color: #0077ff;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    #pricing-2 .btn {
+      display: inline-block;
+      background: #0a2540;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    #pricing-2 .btn:hover {
+      background: #0077ff;
+    }
+
+    /*--plan details--*/
+    .plan-details {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #pricing-3 h2 {
+      text-align: center;
+      margin: 40px 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #0a2540;
+    }
+
+    /* Card */
+    .pricing-card {
+      margin: 0 auto;
+      max-width: 370px;
+      width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Header */
+    .pricing-card h2 {
+      margin: 0;
+      padding: 20px;
+      background: orange;
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    /* Features list */
+    .features {
+      list-style: none;
+      margin: 20px;
+      padding: 0;
+    }
+
+    .features li {
+      font-size: 16px;
+      color: #555;
+      margin: 12px 0;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: green;
+      font-weight: bold;
+    }
+
+    /* Button */
+    .button {
+      display: block;
+      text-align: center;
+      margin: 20px;
+      padding: 12px 20px;
+      background: orange;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #e65c00;
+    }
+    
+     /* Footer Section */
+    footer {
+      background: #f9f9f9;
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 15px;
+    }
+
+    footer img {
+      max-width: 160px;
+      margin-bottom: 20px;
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .footer-content p {
+      margin: 8px 0;
+    }
+
+    .footer-icon {
+      margin-right: 6px;
+      color: #555;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    .copyright {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    margin-left: 15px;
+  }
+}
+
+    @media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    margin-left: 15px;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+  .navbar-brand img {
+    max-height: 50px;
+    width: auto;
+  }
+  .btn-primary {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
+
+/* Mobile (up to 767px) */
+  @media (max-width: 767px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .navbar-brand img {
+    max-height: 45px;
+  }
+
+  .navbar-toggler {
+    margin-left: auto; /* push hamburger to right of logo */
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    background-size: 1.3em 1.3em;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .btn-primary {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+}
+ @media (max-width: 768px) {
+      footer {
+        padding: 30px 15px;
+      }
+
+      .footer-content {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      footer img {
+        max-width: 120px;
+      }
+
+      .footer-content {
+        font-size: 13px;
+      }
+    }
+
+
+
+</style>
+
+<body>
+     <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#"><img src="./SVF DEVELOPMENT MAIN LOGO.jpeg" style="height:60px; width: 150px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="./work.html">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="./features.html">Features</a></li>
+          <li class="nav-item">
+            <a class="btn btn-primary ms-2" href="tel:+919444892265">+91 9444892265</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <section class="pricing-section" id="pricing">
+    <h2>Great pricing plans tailored to your business.</h2>
+    <p>Business website package includes most of the basic essential needs for representing a business online. Contact
+      our sales team for ideas and suggestions.</p>
+
+    <div class="pricing-cards">
+      <div class="card">
+        <div class="card-header basic">Basic</div>
+        <div class="price">₹ 3,499</div>
+        <ul class="features">
+          <li>Business Email id</li>
+          <li>Unlimited Images & Videos</li>
+          <li>100% Responsive Website</li>
+          <li>Analytics</li>
+          <li>Live Chat Integration</li>
+          <li>Annual Renewal Rs.1,000</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header classic">Classic</div>
+        <div class="price">₹ 8,499</div>
+        <ul class="features">
+          <li>5 Page (Dynamic Website)</li>
+          <li>Business Email id</li>
+          <li>Unlimited Images & Videos</li>
+          <li>SEO (Friendly)</li>
+          <li>100% Responsive Website</li>
+          <li>Analytics</li>
+          <li>Live Chat Integration</li>
+          <li>Social Media Integration</li>
+          <li>Annual Renewal Rs. 2,500</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header premium">Premium Plan</div>
+        <div class="price">₹ 13,499</div>
+        <ul class="features">
+          <li>15 Page (Dynamic Website)</li>
+          <li>Business Email id</li>
+          <li>Unlimited Images & Videos</li>
+          <li>SEO (Friendly)</li>
+          <li>100% Responsive Website</li>
+          <li>Analytics</li>
+          <li>Live Chat Integration</li>
+          <li>Payment Gateway Integration</li>
+          <li>Social Media Integration</li>
+          <li>Annual Renewal Rs. 3,500</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="pricing-2">
+    <h2 class="text-center mb-4">E-Commerce Website</h2>
+    <div class="pricing-cards">
+
+      <!-- Silver Plan -->
+      <div class="card plan-card silver">
+        <div class="card-header">Silver Plan</div>
+        <div class="price">₹ 14,499</div>
+        <ul class="features">
+          <li>1 to 50 Product Listing</li>
+          <li>Business Email id</li>
+          <li>100% Responsive Website</li>
+          <li>SEO (Friendly)</li>
+          <li>Analytics</li>
+          <li>Social Media Integration</li>
+          <li>Live Chat Integration</li>
+          <li>Payment Gateway</li>
+          <li>Annual Renewal Rs. 5,000</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <!-- Gold Plan -->
+      <div class="card plan-card gold">
+        <div class="card-header">Gold Plan</div>
+        <div class="price">₹ 21,499</div>
+        <ul class="features">
+          <li>1 to 200 Product Listing</li>
+          <li>Business Email id</li>
+          <li>100% Responsive Website</li>
+          <li>SEO (Friendly)</li>
+          <li>Social Media Integration</li>
+          <li>Live Chat Integration</li>
+          <li>cPanel* Access</li>
+          <li>SSL Certificate</li>
+          <li>Payment Gateway</li>
+          <li>Analytics</li>
+          <li>Annual Renewal Rs. 7,500</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <!-- Platinum Plan -->
+      <div class="card plan-card platinum">
+        <div class="card-header">Platinum Plan</div>
+        <ul class="features">
+          <li>Custom Solutions for Enterprises</li>
+          <li>Customize E-commerce and Application Development</li>
+          <li>Android & IOS</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="plan details" id="pricing-3">
+    <h2>Digital Marketing</h2>
+    <div class="pricing-card">
+      <h2>Plan Details</h2>
+      <ul class="features">
+        <li>Google Ads</li>
+        <li>Search Engine Optimization (SEO)</li>
+        <li>Search Engine Marketing (SEM)</li>
+        <li>Social Media Marketing (SMM)</li>
+        <li>Conversion Rate Optimization (CRO)</li>
+        <li>Online Reputation Management (ORM)</li>
+        <li>Display Advertising / Pay Per Click (PPC)</li>
+        <li>Video Production & Marketing</li>
+        <li>Multilingual Marketing</li>
+        <li>Influencer Marketing</li>
+      </ul>
+      <a href="#" class="button">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="./SVF DEVELOPMENT MAIN LOGO.jpeg" alt="SVF Homes Agency">
+
+    <div class="footer-content">
+      <p><i class="fas fa-map-marker-alt footer-icon"></i>Address: No.3,Munusami Koil
+        Street,Menambedu,Ambatuur,Chennai-53.</p>
+      <p><i class="fas fa-mobile-alt footer-icon"></i> Mobile:
+        <a href="tel:+919444892265">+91 94448 92265</a> /
+        <a href="tel:+917358528262">+91 73585 28262</a>
+      </p>
+      <p><i class="fas fa-envelope footer-icon"></i> Email:
+        <a href="mailto:svfhomes@gmail.com">svfhomes@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="copyright">
+      © 2025 <strong>SVF Homes Agency.</strong>
+    </div>
+  </footer>
+
+
+
+</body>

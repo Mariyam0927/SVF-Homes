@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Website Offer</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- pricing cards-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="styleshee">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+ <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+     .navbar {
+      background: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #1c4a8d;
+    }
+
+    .btn-primary {
+      background: #1c4a8d;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #163870;
+    }
+
+     .portfolio-section {
+      padding: 60px 20px;
+      max-width: 1300px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .portfolio-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-section p {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    /* Portfolio Grid */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      background: #f1f1f1;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: 0.3s ease-in-out;
+    }
+
+    /* Different background colors */
+    .bg-green {
+      background: #c7f7c1;
+    }
+
+    .bg-gray {
+      background: #7d8aa2;
+    }
+
+    .bg-darkblue {
+      background: #163f73;
+    }
+
+    .bg-brown {
+      background: #a28d6a;
+    }
+
+    .bg-lightbrown {
+      background: #c2b6a3;
+    }
+
+    .bg-blue {
+      background: #6da9e4;
+    }
+
+    .bg-pink {
+      background: #f3b6d3;
+    }
+
+    .bg-lightblue {
+      background: #a7c9da;
+    }
+
+    .bg-lightgray {
+      background: #e3e1df;
+    }
+
+    .portfolio-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #243B55, #141E30);
+      color: #fff;
+      padding: 50px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-radius: 8px;
+    }
+
+    .cta-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .cta-text h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+
+    .cta-text p {
+      font-size: 15px;
+      margin: 0;
+      opacity: 0.9;
+    }
+
+    /* Button */
+    .cta-button {
+      background: #fff;
+      color: #0a2540;
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    .cta-button:hover {
+      background: red;
+      color: #fff;
+    }
+
+    /* Section Styling */
+    .features-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .features-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #0a1f44;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .feature {
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .feature img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+      color: #0a1f44;
+    }
+
+    /* Footer Section */
+    footer {
+      background: #f9f9f9;
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 15px;
+    }
+
+    footer img {
+      max-width: 160px;
+      margin-bottom: 20px;
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .footer-content p {
+      margin: 8px 0;
+    }
+
+    .footer-icon {
+      margin-right: 6px;
+      color: #555;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    .copyright {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #555;
+    }
+
+     @media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    margin-left: 15px;
+  }
+}
+
+    @media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    margin-left: 15px;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+  .navbar-brand img {
+    max-height: 50px;
+    width: auto;
+  }
+  .btn-primary {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .navbar-brand img {
+    max-height: 45px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .btn-primary {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+}
+    
+    @media (max-width: 991px) {
+      .portfolio-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .portfolio-section p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .portfolio-section {
+        padding: 40px 10px;
+      }
+
+      .portfolio-section h2 {
+        font-size: 1.5rem;
+      }
+
+      .portfolio-section p {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cta-section {
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .cta-button {
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      footer {
+        padding: 30px 15px;
+      }
+
+      .footer-content {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      footer img {
+        max-width: 120px;
+      }
+
+      .footer-content {
+        font-size: 13px;
+      }
+    }
+
+</style>
+
+<body>
+     <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#"><img src="./SVF DEVELOPMENT MAIN LOGO.jpeg" style="height:60px; width: 150px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="./work.html">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="./features.html">Features</a></li>
+          <li class="nav-item">
+            <a class="btn btn-primary ms-2" href="tel:+919444892265">+91 9444892265</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+     <!-- Portfolio Section -->
+  <section class="portfolio-section">
+    <h2>Our Portfolio</h2>
+    <p>Discover the latest projects accomplished for our clients.</p>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item bg-green">
+        <img src="./portfolio 1.png" alt="Project 1">
+      </div>
+      <div class="portfolio-item bg-gray">
+        <img src="./portfolio 2.png" alt="Project 2">
+      </div>
+      <div class="portfolio-item bg-darkblue">
+        <img src="./portfolio 3.png" alt="Project 3">
+      </div>
+      <div class="portfolio-item bg-brown">
+        <img src="./portfolio 4.jpg" alt="Project 4">
+      </div>
+      <div class="portfolio-item bg-lightbrown">
+        <img src="./portfolio 5.jpg" alt="Project 5">
+      </div>
+      <div class="portfolio-item bg-blue">
+        <img src="./portfolio 6.jpg" alt="Project 6">
+      </div>
+      <div class="portfolio-item bg-pink">
+        <img src="./portfolio 7.jpg" alt="Project 7">
+      </div>
+      <div class="portfolio-item bg-lightblue">
+        <img src="./portfolio 8.jpg" alt="Project 8">
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-text">
+      <h2>Beat The Competition</h2>
+      <p>Get the realistic results your competitors can only dream about!</p>
+    </div>
+    <a href="#contact" class="cta-button">Contact Sales</a>
+  </section>
+
+  <!-- Amazing Features Section -->
+  <section class="features-section">
+    <h2>Amazing Features</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <img src="support 24.svg" alt="Notifications">
+        <p>Support 24/7</p>
+      </div>
+      <div class="feature">
+        <img src="user friendly.svg" alt="User Friendly">
+        <p>User Friendly</p>
+      </div>
+      <div class="feature">
+        <img src="notifications.svg" alt="Notifications">
+        <p>Notifications</p>
+      </div>
+      <div class="feature">
+        <img src="Accesibility.svg" alt="Accessibility">
+        <p>Accessibility</p>
+      </div>
+      <div class="feature">
+        <img src="cost control.svg" alt="Cost Control">
+        <p>Cost Control</p>
+      </div>
+      <div class="feature">
+        <img src="chat with friends.svg" alt="Chat With Friends">
+        <p>Chat With Friends</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="./SVF DEVELOPMENT MAIN LOGO.jpeg" alt="SVF Homes Agency">
+
+    <div class="footer-content">
+      <p><i class="fas fa-map-marker-alt footer-icon"></i>Address: No.3,Munusami Koil
+        Street,Menambedu,Ambatuur,Chennai-53.</p>
+      <p><i class="fas fa-mobile-alt footer-icon"></i> Mobile:
+        <a href="tel:+919444892265">+91 94448 92265</a> /
+        <a href="tel:+917358528262">+91 73585 28262</a>
+      </p>
+      <p><i class="fas fa-envelope footer-icon"></i> Email:
+        <a href="mailto:svfhomes@gmail.com">svfhomes@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="copyright">
+      © 2025 <strong>SVF Homes Agency.</strong>
+    </div>
+  </footer>
+</body>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Website Offer</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- pricing cards-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="styleshee">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+ <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+     .navbar {
+      background: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #1c4a8d;
+    }
+
+    .btn-primary {
+      background: #1c4a8d;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #163870;
+    }
+
+
+     .webdev-section {
+      background: #f5faff;
+      padding: 60px 20px;
+    }
+
+    .webdev-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    /* Left Image */
+    .webdev-image img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transition: 0.3s ease;
+    }
+
+    .webdev-image img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Right Content */
+    .webdev-content {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .webdev-content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .webdev-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    /* Features List */
+    .webdev-features {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .webdev-features ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .webdev-features li {
+      font-size: 15px;
+      margin: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      color: #0a2540;
+      transition: 0.3s;
+    }
+
+    /* Checkmark before each list item */
+    .webdev-features li::before {
+      content: "\2714";
+      position: absolute;
+      left: 0;
+      color: #0077ff;
+      font-weight: bold;
+    }
+
+    /* Hover Effect on Features */
+    .webdev-features li:hover {
+      color: #0077ff;
+      transform: translateX(5px);
+    }
+
+    .choose-section h2 {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #0a2540;
+      line-height: 1.6;
+    }
+
+    /* Section */
+    .choose-section {
+      padding: 60px 20px;
+      background: #fff;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .choose-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .choose-header h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 10px;
+    }
+
+    .choose-header p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    /* Container */
+    .choose-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    /* Left Content */
+    .choose-content {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .choose-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .choose-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    }
+
+    .choose-box h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 10px;
+    }
+
+    .choose-box p {
+      font-size: 15px;
+      color: #333;
+      margin: 0;
+    }
+
+    /* Right Image */
+    .choose-image {
+      flex: 1;
+      text-align: center;
+      min-width: 320px;
+    }
+
+    .choose-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      transition: 0.3s;
+    }
+
+    .choose-image img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Fun Facts Section */
+    .fun-facts {
+      padding: 70px 20px;
+      text-align: center;
+      color: #fff;
+      background-image: url('./background\ image.jpg');
+      /* polygon style */
+      background: linear-gradient(135deg, #243B55, #141E30);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .fun-facts h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    .facts-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .fact-box {
+      transition: all 0.3s ease-in-out;
+      padding: 20px;
+    }
+
+    .fact-box:hover {
+      transform: scale(1.08);
+      color: #ffcc00;
+    }
+
+    .fact-box i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .fact-box h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .fact-box p {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    /* Footer Section */
+    footer {
+      background: #f9f9f9;
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 15px;
+    }
+
+    footer img {
+      max-width: 160px;
+      margin-bottom: 20px;
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .footer-content p {
+      margin: 8px 0;
+    }
+
+    .footer-icon {
+      margin-right: 6px;
+      color: #555;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    .copyright {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #555;
+    }
+
+     @media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    margin-left: 15px;
+  }
+}
+
+    @media (min-width: 992px) {
+  .navbar-nav .nav-item {
+    margin-left: 15px;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+  .navbar-brand img {
+    max-height: 50px;
+    width: auto;
+  }
+  .btn-primary {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .navbar-brand img {
+    max-height: 45px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .btn-primary {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    text-align: center;
+  }
+}
+
+
+
+     @media (max-width: 991px) {
+      .webdev-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .webdev-content h2 {
+        font-size: 1.8rem;
+      }
+
+      .webdev-features {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .webdev-content h2 {
+        font-size: 1.5rem;
+      }
+
+      .webdev-content p {
+        font-size: 14px;
+      }
+
+      .webdev-features {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .choose-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .choose-content {
+        order: 2;
+      }
+
+      .choose-image {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .choose-header h2 {
+        font-size: 1.6rem;
+      }
+
+      .choose-header p {
+        font-size: 14px;
+      }
+
+      .choose-box h3 {
+        font-size: 16px;
+      }
+
+      .choose-box p {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .facts-container {
+        grid-template-columns: 1fr;
+      }
+
+      .fun-facts h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      .fact-box i {
+        font-size: 32px;
+      }
+
+      .fact-box h3 {
+        font-size: 20px;
+      }
+    }
+
+     @media (max-width: 768px) {
+      footer {
+        padding: 30px 15px;
+      }
+
+      .footer-content {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      footer img {
+        max-width: 120px;
+      }
+
+      .footer-content {
+        font-size: 13px;
+      }
+    }
+
+
+</style>
+  <body>
+     <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#"><img src="./SVF DEVELOPMENT MAIN LOGO.jpeg" style="height:60px; width: 150px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="./work.html">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="./features.html">Features</a></li>
+          <li class="nav-item">
+            <a class="btn btn-primary ms-2" href="tel:+919444892265">+91 9444892265</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- What We Do Section -->
+  <section class="services-section py-5" id="services" style="background:#fff;">
+    <div class="container text-center">
+      <h2 class="section-title mb-3" style="font-size:32px; font-weight:700; color:#0c1e46;">What We Do</h2>
+      <p class="section-subtitle mb-5" style="font-size:16px; color:#555;">
+        Discover how our amazing team can help your business.
+      </p>
+
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-box p-4 h-100">
+            <div class="service-icon mb-3">
+              <img src="./web development.jpg" alt="Web Development"
+                style="width:120px; height:120px; border-radius:50%; border:2px dashed #1c4a8d; object-fit:cover;">
+            </div>
+            <h5 style="font-weight:700; color:#0c1e46;">Web Development</h5>
+            <p style="color:#1c4a8d; font-size:14px; margin-bottom:8px;">UI/UX | PHP | Java | Wordpress</p>
+            <p style="font-size:15px; color:#444; line-height:1.6;">
+              Our creative UI sense allows us to provide exceptional designs that
+              facilitate the greatest scalability and speed.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-box p-4 h-100">
+            <div class="service-icon mb-3">
+              <img src="./E-Commerce development.jpg" alt="eCommerce Development"
+                style="width:120px; height:120px; border-radius:50%; border:2px dashed #1c4a8d; object-fit:cover;">
+            </div>
+            <h5 style="font-weight:700; color:#0c1e46;">eCommerce Development</h5>
+            <p style="color:#e63946; font-size:14px; margin-bottom:8px;">Magento | Shopify | Woo-commerce</p>
+            <p style="font-size:15px; color:#444; line-height:1.6;">
+              Scaling your business, generating leads, and running successful ad campaigns —
+              All you need to multiply your conversions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-box p-4 h-100">
+            <div class="service-icon mb-3">
+              <img src="./Mobile App development.jpg" alt="Mobile App Development"
+                style="width:120px; height:120px; border-radius:50%; border:2px dashed #1c4a8d; object-fit:cover;">
+            </div>
+            <h5 style="font-weight:700; color:#0c1e46;">Mobile App Development</h5>
+            <p style="color:#0077ff; font-size:14px; margin-bottom:8px;">iPhone | Android | Cross-platform</p>
+            <p style="font-size:15px; color:#444; line-height:1.6;">
+              Minimise your business complexities with our future-gen cross-platform apps
+              that work across various devices and have maximum outreach.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-box p-4 h-100">
+            <div class="service-icon mb-3">
+              <img src="./Digital marketing.jpg" alt="Digital Marketing Service"
+                style="width:120px; height:120px; border-radius:50%; border:2px dashed #1c4a8d; object-fit:cover;">
+            </div>
+            <h5 style="font-weight:700; color:#0c1e46;">Digital Marketing Service</h5>
+            <p style="color:#1c4a8d; font-size:14px; margin-bottom:8px;">Facebook | Instagram | LinkedIn</p>
+            <p style="font-size:15px; color:#444; line-height:1.6;">
+              A strong online presence, potential customer reach, increased traffic —
+              We bring you a successful digital marketing campaign.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="webdev" class="webdev-section">
+    <div class="webdev-container">
+
+      <!-- Left Image -->
+      <div class="webdev-image">
+        <img src="./WEB DESIGN DEVELOPMENT.jpg" alt="Web Design Development">
+      </div>
+
+      <!-- Right Content -->
+      <div class="webdev-content">
+        <h2>Decades Worth Of Expertise In <br> Business-Centric Web Development</h2>
+        <p>
+          We have a thorough understanding of consumer phycology which helps us come up
+          with websites that can engage your audience and keep them hooked. In this day
+          and age, businesses wouldn’t thrive without establishing a firm digital presence.
+          A professional, informative yet creative website designed by the best in the
+          industry is all your need to grow your brand’s identity.
+        </p>
+
+        <!-- Features List -->
+        <div class="webdev-features">
+          <ul>
+            <li>Search Engine Optimization</li>
+            <li>API Development</li>
+            <li>Database Management</li>
+            <li>QA & Testing</li>
+            <li>Frontend & Backend Development</li>
+          </ul>
+          <ul>
+            <li>Automatic Reports & Analytics</li>
+            <li>Third-Party Integrations</li>
+            <li>Version Control</li>
+            <li>Content Optimization</li>
+            <li>UI & UX Design</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="choose-section">
+    <div class="choose-header">
+      <h2>Why Choose Us</h2>
+      <p>Any company that has bigger goals and ambitions would require a partner like us that can breathe life into your
+        dreams.</p>
+    </div>
+
+    <div class="choose-container">
+      <!-- Left Content -->
+      <div class="choose-content">
+        <div class="choose-box">
+          <h3>Accelerated Performance</h3>
+          <p>To guarantee zero lags and to minimize loading times, we employ SSD hosting and cookie-free domains upon
+            request.</p>
+        </div>
+        <div class="choose-box">
+          <h3>Future-Proof &amp; Scalable</h3>
+          <p>The technologies we use to develop websites are future-safe and can be scaled up or down based on your
+            demand.</p>
+        </div>
+        <div class="choose-box">
+          <h3>Cybertheft Security</h3>
+          <p>To prevent malware attacks and security breaches, we impose frequent bug testing and QA sessions to keep
+            your site fail-proof.</p>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="choose-image">
+        <img src="./website image.gif" alt="Why Choose Us Image">
+      </div>
+    </div>
+  </section>
+
+  <section class="fun-facts">
+    <h2>Fun Facts<br>About SVF Homes Agency</h2>
+
+    <div class="facts-container">
+      <!-- Fact 1 -->
+      <div class="fact-box">
+        <i class="fas fa-handshake"></i>
+        <h3>450+</h3>
+        <p>Satisfied Clients</p>
+      </div>
+
+      <!-- Fact 2 -->
+      <div class="fact-box">
+        <i class="fas fa-desktop"></i>
+        <h3>380+</h3>
+        <p>Successful Projects</p>
+      </div>
+
+      <!-- Fact 3 -->
+      <div class="fact-box">
+        <i class="fas fa-user-tie"></i>
+        <h3>2200</h3>
+        <p>Sales Closed</p>
+      </div>
+
+      <!-- Fact 4 -->
+      <div class="fact-box">
+        <i class="fas fa-headset"></i>
+        <h3>5+</h3>
+        <p>Years of Experience</p>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+  <footer>
+    <img src="./SVF DEVELOPMENT MAIN LOGO.jpeg" alt="SVF Homes Agency">
+
+    <div class="footer-content">
+      <p><i class="fas fa-map-marker-alt footer-icon"></i>Address: No.3,Munusami Koil
+        Street,Menambedu,Ambatuur,Chennai-53.</p>
+      <p><i class="fas fa-mobile-alt footer-icon"></i> Mobile:
+        <a href="tel:+919444892265">+91 94448 92265</a> /
+        <a href="tel:+917358528262">+91 73585 28262</a>
+      </p>
+      <p><i class="fas fa-envelope footer-icon"></i> Email:
+        <a href="mailto:svfhomes@gmail.com">svfhomes@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="copyright">
+      © 2025 <strong>SVF Homes Agency.</strong>
+    </div>
+  </footer>
+
+   <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

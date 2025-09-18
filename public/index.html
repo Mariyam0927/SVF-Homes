@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Website Offer</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- pricing cards-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="styleshee">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: #1c4a8d;
+    }
+
+    .btn-primary {
+      background: #1c4a8d;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #163870;
+    }
+
+
+    .hero {
+      background: linear-gradient(135deg, #c42ed1, #8d1c84);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .hero ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hero ul li {
+      margin-bottom: 8px;
+    }
+
+    .form-box {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* Floating Buttons */
+    .float-btn {
+      position: fixed;
+      left: 10px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .phone-btn {
+      top: 120px;
+      background: #0d6efd;
+    }
+
+    .whatsapp-btn {
+      top: 180px;
+      background: #25D366;
+    }
+
+    /* Enquiry Now Tab */
+    .enquiry-tab {
+      position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: red;
+      color: white;
+      padding: 10px 8px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-weight: bold;
+      border-radius: 5px 0 0 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    /* Call Us Section */
+    .callback-form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+    }
+
+    .callback-form h3 {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .callback-form p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .form-group i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #777;
+      font-size: 16px;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px 10px 10px 40px;
+      /* padding left for icon */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #007bff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .contact-buttons {
+      position: fixed;
+      top: 40%;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-btn {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2px 0;
+      color: white;
+      font-size: 20px;
+      border-radius: 0 5px 5px 0;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .phone-btn {
+      background: #0d1b2a;
+      /* dark navy */
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      /* whatsapp green */
+    }
+
+    .contact-btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Call Us Section */
+    .call-us {
+      margin-top: 20px;
+      margin-left: 80px;
+    }
+
+    .call-us p {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-left: 60px;
+    }
+
+    .call-btn {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .call-btn i {
+      margin-right: 8px;
+    }
+
+    .call-btn:hover {
+      background: #0056b3;
+    }
+
+    .clients-section {
+      text-align: center;
+      padding: 50px 20px;
+      background: #fff;
+    }
+
+    .clients-section h2 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #0c1e46;
+      margin-bottom: 40px;
+    }
+
+    .clients-logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 25px;
+      justify-items: center;
+    }
+
+    .clients-logos img {
+      width: 160px;
+      max-height: 90px;
+      object-fit: contain;
+      background: #fff;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .clients-logos img:hover {
+      transform: scale(1.05);
+    }
+
+    .pricing-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f4f9ff;
+    }
+
+    .pricing-section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #0a2540;
+    }
+
+    .pricing-section p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 50px;
+    }
+
+    .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      padding: 25px;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-header {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .basic {
+      background: #f72585;
+    }
+
+    .classic {
+      background: #7209b7;
+    }
+
+    .premium {
+      background: #0077ff;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .features {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    .features li {
+      list-style: none;
+      margin: 10px 0;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: '✔';
+      color: #0077ff;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0a2540;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0077ff;
+    }
+
+    #pricing-2 {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f9fcff;
+    }
+
+    #pricing-2 h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #0a2540;
+    }
+
+    #pricing-2 .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    #pricing-2 .plan-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      padding: 25px;
+      transition: 0.3s ease;
+    }
+
+    #pricing-2 .plan-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    #pricing-2 .card-header {
+      font-size: 1.4rem;
+      font-weight: 700;
+      padding: 15px;
+      border-radius: 8px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .plan-card.silver .card-header {
+      background: #f9a825;
+      /* Silver plan Yellow */
+    }
+
+    .plan-card.gold .card-header {
+      background: #1c344d;
+      /* Dark Blue */
+    }
+
+    .plan-card.platinum .card-header {
+      background: #1c344d;
+      /* Same Blue */
+    }
+
+    #pricing-2 .price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 20px;
+    }
+
+    #pricing-2 .features {
+      text-align: left;
+      margin-bottom: 25px;
+      padding-left: 0;
+    }
+
+    #pricing-2 .features li {
+      list-style: none;
+      margin: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      font-size: 15px;
+      color: #333;
+    }
+
+    #pricing-2 .features li::before {
+      content: "\2714";
+      /* Tick mark */
+      color: #0077ff;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    #pricing-2 .btn {
+      display: inline-block;
+      background: #0a2540;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    #pricing-2 .btn:hover {
+      background: #0077ff;
+    }
+
+    /*--plan details--*/
+    .plan-details {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #pricing-3 h2 {
+      text-align: center;
+      margin: 40px 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #0a2540;
+    }
+
+    /* Card */
+    .pricing-card {
+      margin: 0 auto;
+      max-width: 370px;
+      width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Header */
+    .pricing-card h2 {
+      margin: 0;
+      padding: 20px;
+      background: orange;
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    /* Features list */
+    .features {
+      list-style: none;
+      margin: 20px;
+      padding: 0;
+    }
+
+    .features li {
+      font-size: 16px;
+      color: #555;
+      margin: 12px 0;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: green;
+      font-weight: bold;
+    }
+
+    /* Button */
+    .button {
+      display: block;
+      text-align: center;
+      margin: 20px;
+      padding: 12px 20px;
+      background: orange;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #e65c00;
+    }
+
+    .webdev-section {
+      background: #f5faff;
+      padding: 60px 20px;
+    }
+
+    .webdev-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    /* Left Image */
+    .webdev-image img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transition: 0.3s ease;
+    }
+
+    .webdev-image img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Right Content */
+    .webdev-content {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .webdev-content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .webdev-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    /* Features List */
+    .webdev-features {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .webdev-features ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .webdev-features li {
+      font-size: 15px;
+      margin: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      color: #0a2540;
+      transition: 0.3s;
+    }
+
+    /* Checkmark before each list item */
+    .webdev-features li::before {
+      content: "\2714";
+      position: absolute;
+      left: 0;
+      color: #0077ff;
+      font-weight: bold;
+    }
+
+    /* Hover Effect on Features */
+    .webdev-features li:hover {
+      color: #0077ff;
+      transform: translateX(5px);
+    }
+
+    .choose-section h2 {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #0a2540;
+      line-height: 1.6;
+    }
+
+    /* Section */
+    .choose-section {
+      padding: 60px 20px;
+      background: #fff;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .choose-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .choose-header h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 10px;
+    }
+
+    .choose-header p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    /* Container */
+    .choose-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    /* Left Content */
+    .choose-content {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .choose-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .choose-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    }
+
+    .choose-box h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 10px;
+    }
+
+    .choose-box p {
+      font-size: 15px;
+      color: #333;
+      margin: 0;
+    }
+
+    /* Right Image */
+    .choose-image {
+      flex: 1;
+      text-align: center;
+      min-width: 320px;
+    }
+
+    .choose-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      transition: 0.3s;
+    }
+
+    .choose-image img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Fun Facts Section */
+    .fun-facts {
+      padding: 70px 20px;
+      text-align: center;
+      color: #fff;
+      background-image: url('./background\ image.jpg');
+      /* polygon style */
+      background: linear-gradient(135deg, #243B55, #141E30);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .fun-facts h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    .facts-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .fact-box {
+      transition: all 0.3s ease-in-out;
+      padding: 20px;
+    }
+
+    .fact-box:hover {
+      transform: scale(1.08);
+      color: #ffcc00;
+    }
+
+    .fact-box i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .fact-box h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .fact-box p {
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .portfolio-section {
+      padding: 60px 20px;
+      max-width: 1300px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .portfolio-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-section p {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    /* Portfolio Grid */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      background: #f1f1f1;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: 0.3s ease-in-out;
+    }
+
+    /* Different background colors */
+    .bg-green {
+      background: #c7f7c1;
+    }
+
+    .bg-gray {
+      background: #7d8aa2;
+    }
+
+    .bg-darkblue {
+      background: #163f73;
+    }
+
+    .bg-brown {
+      background: #a28d6a;
+    }
+
+    .bg-lightbrown {
+      background: #c2b6a3;
+    }
+
+    .bg-blue {
+      background: #6da9e4;
+    }
+
+    .bg-pink {
+      background: #f3b6d3;
+    }
+
+    .bg-lightblue {
+      background: #a7c9da;
+    }
+
+    .bg-lightgray {
+      background: #e3e1df;
+    }
+
+    .portfolio-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #243B55, #141E30);
+      color: #fff;
+      padding: 50px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-radius: 8px;
+    }
+
+    .cta-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .cta-text h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+
+    .cta-text p {
+      font-size: 15px;
+      margin: 0;
+      opacity: 0.9;
+    }
+
+    /* Button */
+    .cta-button {
+      background: #fff;
+      color: #0a2540;
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    .cta-button:hover {
+      background: red;
+      color: #fff;
+    }
+
+    /* Section Styling */
+    .features-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .features-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #0a1f44;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .feature {
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .feature img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+      color: #0a1f44;
+    }
+
+    /* Footer Section */
+    footer {
+      background: #f9f9f9;
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 15px;
+    }
+
+    footer img {
+      max-width: 160px;
+      margin-bottom: 20px;
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .footer-content p {
+      margin: 8px 0;
+    }
+
+    .footer-icon {
+      margin-right: 6px;
+      color: #555;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    .copyright {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Desktop (≥992px) */
+    @media (min-width: 992px) {
+      .navbar-nav .nav-item {
+        margin-left: 15px;
+      }
+    }
+
+    /* Tablets (768px - 991px) */
+    @media (max-width: 991px) {
+      .navbar-brand img {
+        max-height: 50px;
+        width: auto;
+      }
+
+      .btn-primary {
+        font-size: 14px;
+        padding: 7px 14px;
+      }
+    }
+
+    /* Mobile (up to 767px) */
+    @media (max-width: 767px) {
+      .navbar {
+        padding: 8px 15px;
+      }
+
+      /* Make logo + toggle button align in one row */
+      .navbar .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        /* logo left, toggler right */
+        align-items: center;
+      }
+
+      .navbar-brand img {
+        max-height: 45px;
+        width: auto;
+      }
+
+      .navbar-toggler {
+        border: none;
+        background: transparent;
+        padding: 5px;
+        margin-left: auto;
+        /* push toggler to the right */
+      }
+
+      .nav-link {
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .btn-primary {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        text-align: center;
+      }
+
+      .navbar-collapse {
+        text-align: center;
+      }
+    }
+
+
+    /* Mobile Fix */
+    @media (max-width: 991px) {
+      .hero {
+        display: block;
+        padding: 80px 20px;
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .float-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        left: 8px;
+      }
+
+      .phone-btn {
+        top: 100px;
+      }
+
+      .whatsapp-btn {
+        top: 155px;
+      }
+
+      .enquiry-tab {
+        font-size: 14px;
+        padding: 8px 6px;
+      }
+    }
+
+    /* Large Phones (576px and below) */
+    @media (max-width: 576px) {
+      .float-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+        left: 6px;
+      }
+
+      .phone-btn {
+        top: 90px;
+      }
+
+      .whatsapp-btn {
+        top: 145px;
+      }
+
+      .enquiry-tab {
+        font-size: 13px;
+        padding: 6px 5px;
+      }
+    }
+
+    /* Small Phones (400px and below) */
+    @media (max-width: 400px) {
+      .float-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+        left: 5px;
+      }
+
+      .phone-btn {
+        top: 80px;
+      }
+
+      .whatsapp-btn {
+        top: 130px;
+      }
+
+      .enquiry-tab {
+        font-size: 12px;
+        padding: 5px 4px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .clients-section h2 {
+        font-size: 22px;
+      }
+
+      .clients-logos img {
+        width: 130px;
+        max-height: 70px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .clients-section {
+        padding: 30px 15px;
+      }
+
+      .clients-section h2 {
+        font-size: 20px;
+      }
+
+      .clients-logos {
+        gap: 18px;
+      }
+
+      .clients-logos img {
+        width: 110px;
+        max-height: 65px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .pricing-cards {
+        gap: 20px;
+      }
+
+      .card {
+        width: 280px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      #pricing-2 .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #pricing-2 .plan-card {
+        width: 100%;
+        max-width: 420px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .pricing-card {
+        max-width: 100%;
+        margin: 0 10px;
+      }
+
+      .features li {
+        font-size: 14px;
+      }
+
+      .pricing-card h2 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .webdev-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .webdev-content h2 {
+        font-size: 1.8rem;
+      }
+
+      .webdev-features {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .webdev-content h2 {
+        font-size: 1.5rem;
+      }
+
+      .webdev-content p {
+        font-size: 14px;
+      }
+
+      .webdev-features {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .choose-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .choose-content {
+        order: 2;
+      }
+
+      .choose-image {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .choose-header h2 {
+        font-size: 1.6rem;
+      }
+
+      .choose-header p {
+        font-size: 14px;
+      }
+
+      .choose-box h3 {
+        font-size: 16px;
+      }
+
+      .choose-box p {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .facts-container {
+        grid-template-columns: 1fr;
+      }
+
+      .fun-facts h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      .fact-box i {
+        font-size: 32px;
+      }
+
+      .fact-box h3 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .portfolio-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .portfolio-section p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .portfolio-section {
+        padding: 40px 10px;
+      }
+
+      .portfolio-section h2 {
+        font-size: 1.5rem;
+      }
+
+      .portfolio-section p {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cta-section {
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .cta-button {
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      footer {
+        padding: 30px 15px;
+      }
+
+      .footer-content {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      footer img {
+        max-width: 120px;
+      }
+
+      .footer-content {
+        font-size: 13px;
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#"><img src="./SVF DEVELOPMENT MAIN LOGO.jpeg"
+          style="height:60px; width: 150px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="./work.html">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="./features.html">Features</a></li>
+          <li class="nav-item">
+            <a class="btn btn-primary ms-2" href="tel:+919444892265">+91 9444892265</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Text -->
+        <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
+          <h1>GET BEST QUALITY PROFESSIONAL WEBSITE @ JUST RS. 4999 IN 12 HOURS</h1>
+          <ul class="mt-3">
+            <li>- Business Email id</li>
+            <li>- Unlimited Images & Videos</li>
+            <li>- 100% Responsive Website</li>
+            <li>- Analytics</li>
+            <li>- Live Chat Integration</li>
+            <li>- Annual Renewal Rs.1,000</li>
+          </ul>
+        </div>
+        <!-- Request a Callback Form -->
+        <div class="callback-form">
+          <h3>REQUEST A CALLBACK</h3>
+          <p>Create a website with experts. We had created more than 1000+ Projects</p>
+          <form action="/.netlify/functions/submit-form" method="POST">
+
+            <!-- Name -->
+            <div class="form-group">
+              <i class="fa fa-user"></i>
+              <input type="text" name="name" placeholder="Name*" required>
+            </div>
+
+            <!-- Mobile -->
+            <div class="form-group">
+              <i class="fa fa-phone"></i>
+              <input type="tel" name="mobile" placeholder="Mobile*" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <i class="fa fa-envelope"></i>
+              <input type="email" name="email" placeholder="Email*" required>
+            </div>
+
+            <!-- Select Package -->
+            <div class="form-group">
+              <i class="fa fa-list"></i>
+              <select name="package" required>
+                <option value="">Select Package*</option>
+                <option>Basic</option>
+                <option>Standard</option>
+                <option>Premium</option>
+              </select>
+            </div>
+
+            <button type="submit">SUBMIT</button>
+
+          </form>
+
+
+          <!-- Call Us Section (Inside Box) -->
+          <div class="call-us">
+            <p>Call Us</p>
+            <a href="tel:+919444892265" class="call-btn">
+              <i class="fa fa-phone"></i> +91 9444892265
+            </a>
+          </div>
+          </form>
+        </div>
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="clients-section" id="clients">
+    <h2>Our Clients</h2>
+    <div class="clients-logos">
+      <img src="./SVF Homes.jpeg" alt="SVF Homes">
+      <img src="./SVF Loan.jpeg" alt="SVF Loan">
+      <img src="./SVF software development.jpeg" alt="SVF Software Development">
+    </div>
+  </section>
+
+  <section class="pricing-section" id="pricing">
+    <h2>Great pricing plans tailored to your business.</h2>
+    <p>Business website package includes most of the basic essential needs for representing a business online. Contact
+      our sales team for ideas and suggestions.</p>
+
+    <div class="pricing-cards">
+      <div class="card">
+        <div class="card-header basic">Basic</div>
+        <div class="price">₹ 3,499</div>
+        <ul class="features">
+          <li>Business Email id</li>
+          <li>Unlimited Images & Videos</li>
+          <li>100% Responsive Website</li>
+          <li>Analytics</li>
+          <li>Live Chat Integration</li>
+          <li>Annual Renewal Rs.1,000</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header classic">Classic</div>
+        <div class="price">₹ 8,499</div>
+        <ul class="features">
+          <li>5 Page (Dynamic Website)</li>
+          <li>Business Email id</li>
+          <li>Unlimited Images & Videos</li>
+          <li>SEO (Friendly)</li>
+          <li>100% Responsive Website</li>
+          <li>Analytics</li>
+          <li>Live Chat Integration</li>
+          <li>Social Media Integration</li>
+          <li>Annual Renewal Rs. 2,500</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header premium">Premium Plan</div>
+        <div class="price">₹ 13,499</div>
+        <ul class="features">
+          <li>15 Page (Dynamic Website)</li>
+          <li>Business Email id</li>
+          <li>Unlimited Images & Videos</li>
+          <li>SEO (Friendly)</li>
+          <li>100% Responsive Website</li>
+          <li>Analytics</li>
+          <li>Live Chat Integration</li>
+          <li>Payment Gateway Integration</li>
+          <li>Social Media Integration</li>
+          <li>Annual Renewal Rs. 3,500</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="pricing-2">
+    <h2 class="text-center mb-4">E-Commerce Website</h2>
+    <div class="pricing-cards">
+
+      <!-- Silver Plan -->
+      <div class="card plan-card silver">
+        <div class="card-header">Silver Plan</div>
+        <div class="price">₹ 14,499</div>
+        <ul class="features">
+          <li>1 to 50 Product Listing</li>
+          <li>Business Email id</li>
+          <li>100% Responsive Website</li>
+          <li>SEO (Friendly)</li>
+          <li>Analytics</li>
+          <li>Social Media Integration</li>
+          <li>Live Chat Integration</li>
+          <li>Payment Gateway</li>
+          <li>Annual Renewal Rs. 5,000</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <!-- Gold Plan -->
+      <div class="card plan-card gold">
+        <div class="card-header">Gold Plan</div>
+        <div class="price">₹ 21,499</div>
+        <ul class="features">
+          <li>1 to 200 Product Listing</li>
+          <li>Business Email id</li>
+          <li>100% Responsive Website</li>
+          <li>SEO (Friendly)</li>
+          <li>Social Media Integration</li>
+          <li>Live Chat Integration</li>
+          <li>cPanel* Access</li>
+          <li>SSL Certificate</li>
+          <li>Payment Gateway</li>
+          <li>Analytics</li>
+          <li>Annual Renewal Rs. 7,500</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+      <!-- Platinum Plan -->
+      <div class="card plan-card platinum">
+        <div class="card-header">Platinum Plan</div>
+        <ul class="features">
+          <li>Custom Solutions for Enterprises</li>
+          <li>Customize E-commerce and Application Development</li>
+          <li>Android & IOS</li>
+        </ul>
+        <a href="#" class="btn">Book Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="plan details" id="pricing-3">
+    <h2>Digital Marketing</h2>
+    <div class="pricing-card">
+      <h2>Plan Details</h2>
+      <ul class="features">
+        <li>Google Ads</li>
+        <li>Search Engine Optimization (SEO)</li>
+        <li>Search Engine Marketing (SEM)</li>
+        <li>Social Media Marketing (SMM)</li>
+        <li>Conversion Rate Optimization (CRO)</li>
+        <li>Online Reputation Management (ORM)</li>
+        <li>Display Advertising / Pay Per Click (PPC)</li>
+        <li>Video Production & Marketing</li>
+        <li>Multilingual Marketing</li>
+        <li>Influencer Marketing</li>
+      </ul>
+      <a href="#" class="button">Book Now</a>
+    </div>
+  </section>
+
+  <!-- What We Do Section -->
+  <section class="services-section py-5" id="services" style="background:#fff;">
+    <div class="container text-center">
+      <h2 class="section-title mb-3" style="font-size:32px; font-weight:700; color:#0c1e46;">What We Do</h2>
+      <p class="section-subtitle mb-5" style="font-size:16px; color:#555;">
+        Discover how our amazing team can help your business.
+      </p>
+
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-box p-4 h-100">
+            <div class="service-icon mb-3">
+              <img src="./web development.jpg" alt="Web Development"
+                style="width:120px; height:120px; border-radius:50%; border:2px dashed #1c4a8d; object-fit:cover;">
+            </div>
+            <h5 style="font-weight:700; color:#0c1e46;">Web Development</h5>
+            <p style="color:#1c4a8d; font-size:14px; margin-bottom:8px;">UI/UX | PHP | Java | Wordpress</p>
+            <p style="font-size:15px; color:#444; line-height:1.6;">
+              Our creative UI sense allows us to provide exceptional designs that
+              facilitate the greatest scalability and speed.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-box p-4 h-100">
+            <div class="service-icon mb-3">
+              <img src="./E-Commerce development.jpg" alt="eCommerce Development"
+                style="width:120px; height:120px; border-radius:50%; border:2px dashed #1c4a8d; object-fit:cover;">
+            </div>
+            <h5 style="font-weight:700; color:#0c1e46;">eCommerce Development</h5>
+            <p style="color:#e63946; font-size:14px; margin-bottom:8px;">Magento | Shopify | Woo-commerce</p>
+            <p style="font-size:15px; color:#444; line-height:1.6;">
+              Scaling your business, generating leads, and running successful ad campaigns —
+              All you need to multiply your conversions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-box p-4 h-100">
+            <div class="service-icon mb-3">
+              <img src="./Mobile App development.jpg" alt="Mobile App Development"
+                style="width:120px; height:120px; border-radius:50%; border:2px dashed #1c4a8d; object-fit:cover;">
+            </div>
+            <h5 style="font-weight:700; color:#0c1e46;">Mobile App Development</h5>
+            <p style="color:#0077ff; font-size:14px; margin-bottom:8px;">iPhone | Android | Cross-platform</p>
+            <p style="font-size:15px; color:#444; line-height:1.6;">
+              Minimise your business complexities with our future-gen cross-platform apps
+              that work across various devices and have maximum outreach.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="service-box p-4 h-100">
+            <div class="service-icon mb-3">
+              <img src="./Digital marketing.jpg" alt="Digital Marketing Service"
+                style="width:120px; height:120px; border-radius:50%; border:2px dashed #1c4a8d; object-fit:cover;">
+            </div>
+            <h5 style="font-weight:700; color:#0c1e46;">Digital Marketing Service</h5>
+            <p style="color:#1c4a8d; font-size:14px; margin-bottom:8px;">Facebook | Instagram | LinkedIn</p>
+            <p style="font-size:15px; color:#444; line-height:1.6;">
+              A strong online presence, potential customer reach, increased traffic —
+              We bring you a successful digital marketing campaign.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="webdev" class="webdev-section">
+    <div class="webdev-container">
+
+      <!-- Left Image -->
+      <div class="webdev-image">
+        <img src="./WEB DESIGN DEVELOPMENT.jpg" alt="Web Design Development">
+      </div>
+
+      <!-- Right Content -->
+      <div class="webdev-content">
+        <h2>Decades Worth Of Expertise In <br> Business-Centric Web Development</h2>
+        <p>
+          We have a thorough understanding of consumer phycology which helps us come up
+          with websites that can engage your audience and keep them hooked. In this day
+          and age, businesses wouldn’t thrive without establishing a firm digital presence.
+          A professional, informative yet creative website designed by the best in the
+          industry is all your need to grow your brand’s identity.
+        </p>
+
+        <!-- Features List -->
+        <div class="webdev-features">
+          <ul>
+            <li>Search Engine Optimization</li>
+            <li>API Development</li>
+            <li>Database Management</li>
+            <li>QA & Testing</li>
+            <li>Frontend & Backend Development</li>
+          </ul>
+          <ul>
+            <li>Automatic Reports & Analytics</li>
+            <li>Third-Party Integrations</li>
+            <li>Version Control</li>
+            <li>Content Optimization</li>
+            <li>UI & UX Design</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="choose-section">
+    <div class="choose-header">
+      <h2>Why Choose Us</h2>
+      <p>Any company that has bigger goals and ambitions would require a partner like us that can breathe life into your
+        dreams.</p>
+    </div>
+
+    <div class="choose-container">
+      <!-- Left Content -->
+      <div class="choose-content">
+        <div class="choose-box">
+          <h3>Accelerated Performance</h3>
+          <p>To guarantee zero lags and to minimize loading times, we employ SSD hosting and cookie-free domains upon
+            request.</p>
+        </div>
+        <div class="choose-box">
+          <h3>Future-Proof &amp; Scalable</h3>
+          <p>The technologies we use to develop websites are future-safe and can be scaled up or down based on your
+            demand.</p>
+        </div>
+        <div class="choose-box">
+          <h3>Cybertheft Security</h3>
+          <p>To prevent malware attacks and security breaches, we impose frequent bug testing and QA sessions to keep
+            your site fail-proof.</p>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="choose-image">
+        <img src="./website image.gif" alt="Why Choose Us Image">
+      </div>
+    </div>
+  </section>
+
+  <section class="fun-facts">
+    <h2>Fun Facts<br>About SVF Homes Agency</h2>
+
+    <div class="facts-container">
+      <!-- Fact 1 -->
+      <div class="fact-box">
+        <i class="fas fa-handshake"></i>
+        <h3>450+</h3>
+        <p>Satisfied Clients</p>
+      </div>
+
+      <!-- Fact 2 -->
+      <div class="fact-box">
+        <i class="fas fa-desktop"></i>
+        <h3>380+</h3>
+        <p>Successful Projects</p>
+      </div>
+
+      <!-- Fact 3 -->
+      <div class="fact-box">
+        <i class="fas fa-user-tie"></i>
+        <h3>2200</h3>
+        <p>Sales Closed</p>
+      </div>
+
+      <!-- Fact 4 -->
+      <div class="fact-box">
+        <i class="fas fa-headset"></i>
+        <h3>5+</h3>
+        <p>Years of Experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section">
+    <h2>Our Portfolio</h2>
+    <p>Discover the latest projects accomplished for our clients.</p>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item bg-green">
+        <img src="./portfolio 1.png" alt="Project 1">
+      </div>
+      <div class="portfolio-item bg-gray">
+        <img src="./portfolio 2.png" alt="Project 2">
+      </div>
+      <div class="portfolio-item bg-darkblue">
+        <img src="./portfolio 3.png" alt="Project 3">
+      </div>
+      <div class="portfolio-item bg-brown">
+        <img src="./portfolio 4.jpg" alt="Project 4">
+      </div>
+      <div class="portfolio-item bg-lightbrown">
+        <img src="./portfolio 5.jpg" alt="Project 5">
+      </div>
+      <div class="portfolio-item bg-blue">
+        <img src="./portfolio 6.jpg" alt="Project 6">
+      </div>
+      <div class="portfolio-item bg-pink">
+        <img src="./portfolio 7.jpg" alt="Project 7">
+      </div>
+      <div class="portfolio-item bg-lightblue">
+        <img src="./portfolio 8.jpg" alt="Project 8">
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-text">
+      <h2>Beat The Competition</h2>
+      <p>Get the realistic results your competitors can only dream about!</p>
+    </div>
+    <a href="#contact" class="cta-button">Contact Sales</a>
+  </section>
+
+  <!-- Amazing Features Section -->
+  <section class="features-section">
+    <h2>Amazing Features</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <img src="support 24.svg" alt="Notifications">
+        <p>Support 24/7</p>
+      </div>
+      <div class="feature">
+        <img src="user friendly.svg" alt="User Friendly">
+        <p>User Friendly</p>
+      </div>
+      <div class="feature">
+        <img src="notifications.svg" alt="Notifications">
+        <p>Notifications</p>
+      </div>
+      <div class="feature">
+        <img src="Accesibility.svg" alt="Accessibility">
+        <p>Accessibility</p>
+      </div>
+      <div class="feature">
+        <img src="cost control.svg" alt="Cost Control">
+        <p>Cost Control</p>
+      </div>
+      <div class="feature">
+        <img src="chat with friends.svg" alt="Chat With Friends">
+        <p>Chat With Friends</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="./SVF DEVELOPMENT MAIN LOGO.jpeg" alt="SVF Homes Agency">
+
+    <div class="footer-content">
+      <p><i class="fas fa-map-marker-alt footer-icon"></i>Address: No.3,Munusami Koil
+        Street,Menambedu,Ambatuur,Chennai-53.</p>
+      <p><i class="fas fa-mobile-alt footer-icon"></i> Mobile:
+        <a href="tel:+919444892265">+91 94448 92265</a> /
+        <a href="tel:+917358528262">+91 73585 28262</a>
+      </p>
+      <p><i class="fas fa-envelope footer-icon"></i> Email:
+        <a href="mailto:svfhomes@gmail.com">svfhomes@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="copyright">
+      © 2025 <strong>SVF Homes Agency.</strong>
+    </div>
+  </footer>
+
+
+  <!-- Floating Buttons -->
+  <div class="contact-buttons">
+    <a href="tel:+917550027711" class="contact-btn phone-btn">
+      <i class="fa fa-phone"></i>
+    </a>
+    <a href="https://wa.me/917550027711" target="_blank" class="contact-btn whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+  <div class="enquiry-tab">Enquiry Now</div>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
